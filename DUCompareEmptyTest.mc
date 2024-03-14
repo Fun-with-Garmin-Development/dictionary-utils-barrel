@@ -2,6 +2,7 @@ import Toybox.Lang;
 import Toybox.System;
 import Toybox.Test;
 
+(:test)
 module DictionaryUtilsBarrel {
     (:test)
     function testBothEmpty(logger as Logger) as Boolean {

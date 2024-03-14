@@ -41,7 +41,11 @@ module DictionaryUtilsBarrel {
         return true;
     }
 
-    function mergeDictionaries(dict1 as Dictionary, dict2 as Dictionary) as Dictionary {
+    function mergeDictionaries(dict1 as Dictionary?, dict2 as Dictionary?) as Dictionary? {
+        // if dict2 is null, return dict1; don't proceed with dict1 if it is null
+        if (dict1 == null || dict2 == null) {
+            return dict1;
+        }
         var keys = dict2.keys();
         for (var i = 0; i < keys.size(); i++) {
             var key = keys[i];

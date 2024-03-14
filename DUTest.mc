@@ -25,4 +25,13 @@ module DictionaryUtilsBarrel {
             logger.debug(Lang.format("dict2.hashCode(): $1$", [dict2.hashCode()]));
         }
     }
+
+    function dumpMerged(dict1 as Dictionary?, dict2 as Dictionary?, logger as Logger) {
+        if (QUIET) {
+            return;
+        }
+        logger.debug(Lang.format("dict1: $1$", [dict1]));
+        logger.debug(Lang.format("dict2: $1$", [dict2]));
+        logger.debug(Lang.format("merged: $1$", [DictionaryUtilsBarrel.mergeDictionaries(dict1, dict2)]));
+    }
 }
