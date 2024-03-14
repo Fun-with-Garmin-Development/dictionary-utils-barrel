@@ -4,7 +4,7 @@ import Toybox.Test;
 
 (:test)
 module DictionaryUtilsBarrel {
-    const QUIET = true;
+    const QUIET = false;
     function dumpInfo(dict1 as Dictionary?, dict2 as Dictionary?, logger as Logger) {
         if (QUIET) {
             return;

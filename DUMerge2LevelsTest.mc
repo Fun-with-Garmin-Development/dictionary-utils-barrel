@@ -19,7 +19,7 @@ module DictionaryUtilsBarrel {
     function testMerge2Levels2(logger as Logger) as Boolean {
         var dict1 = { "level2" => { "key1" => 1, "key2" => 2 } };
         var dict2 = { "level2" => { "key2" => 2, "key1" => 1 } };
-        var expected = dict1;
+        var expected = { "level2" => { "key1" => 1, "key2" => 2 } };
         var result = DictionaryUtilsBarrel.mergeDictionaries(dict1, dict2);
         dumpMerged(dict1, dict2, logger);
         Test.assert(DictionaryUtilsBarrel.compareDictionaries(result, expected));
@@ -30,7 +30,7 @@ module DictionaryUtilsBarrel {
     function testMerge2Levels3(logger as Logger) as Boolean {
         var dict1 = { "level2" => { "key1" => 1, "key2" => 2 } };
         var dict2 = { "level2" => { "key1" => 1, "key2" => 2, "key3" => 3 } };
-        var expected = dict2;
+        var expected = { "level2" => { "key1" => 1, "key2" => 2, "key3" => 3 } };
         var result = DictionaryUtilsBarrel.mergeDictionaries(dict1, dict2);
         dumpMerged(dict1, dict2, logger);
         Test.assert(DictionaryUtilsBarrel.compareDictionaries(result, expected));
@@ -41,7 +41,7 @@ module DictionaryUtilsBarrel {
     function testMergeSingleKeyDifferentValue(logger as Logger) as Boolean {
         var dict1 = { "key1" => 1 };
         var dict2 = { "key1" => 2 };
-        var expected = dict2;
+        var expected = { "key1" => 2 };
         var result = DictionaryUtilsBarrel.mergeDictionaries(dict1, dict2);
         dumpMerged(dict1, dict2, logger);
         Test.assert(DictionaryUtilsBarrel.compareDictionaries(result, expected));
