@@ -1,0 +1,6 @@
+bin/
+*.priv
+*.priv.*
+.idea/
+*.priv
+*.priv.*
