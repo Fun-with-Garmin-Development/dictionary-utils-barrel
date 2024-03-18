@@ -21,6 +21,8 @@ for details.
 Once it has been added to a project, the compiler starts "to see" the barrel.
 There is no need for importing it, unless you want to use alias for the library.
 
+You can obtain the compiled .barrel file from project's [releases page](https://github.com/Fun-with-Garmin-Development/dictionary-utils-barrel/releases).
+
 ## Description
 
 ### Merge dictionaries
